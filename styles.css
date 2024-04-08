@@ -27,7 +27,6 @@ main {
   border-radius: 15px;
   text-align: center;
   transition: 1s all ease;
-  position: absolute;
 
   #cardBody{
     transition: none;
@@ -51,7 +50,10 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  margin-top: 8rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 25%;
+
   animation: Rainbow 1s linear infinite;
 }
 

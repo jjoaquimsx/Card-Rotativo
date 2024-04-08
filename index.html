@@ -12,30 +12,53 @@
   <main>
     <div class="card" id="card">
       <header>
-        <h1 id="title">Card</h1>
+        <h1 id="title">Cartao do amor</h1>
       </header>
       <section id="cardBody">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, nostrum fugiat reiciendis soluta nemo distinctio sint suscipit repudiandae dignissimos similique! Aperiam blanditiis quaerat tenetur deleniti eum assumenda veritatis nam fuga!
+        Clique para ver a mensagem
       </section>
       <footer>
         &copy; joaquim.sx
       </footer>
 
-  <script>
-    const mainTitle = document.getElementById("title");
-    const mainCard = document.getElementById("cardBody")
+      <script>
+        const mainTitle = document.getElementById("title");
+        const mainCard = document.getElementById("cardBody")
+        const footer = document.querySelector("footer")
 
-    document.getElementById("card").addEventListener("mouseenter", () => {
-      mainTitle.innerText = "Card 2";
-      mainCard.innerText = "texto do card 2"
-    });
+        footer.style.display = "none"
 
-    document.getElementById("card").addEventListener("mouseleave", () => {
-      mainTitle.innerText = "Card"
-      mainCard.innerText = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure, nostrum fugiat reiciendis soluta nemo distinctio sint suscipit repudiandae dignissimos similique! Aperiam blanditiis quaerat tenetur deleniti eum assumenda veritatis nam fuga!";
-    });
-  </script>
+        document.getElementById("card").addEventListener("mouseenter", () => {
+          mainTitle.innerText = "Teamo Ana";
+          mainCard.innerText = "Eu te amo tanto meu amor,. voce é a melhor coisa que me aconteceu, quero ficar com voce pra sempre"
+          footer.style.display = "inline"
+        });
+
+        document.getElementById("card").addEventListener("mouseleave", () => {
+          mainTitle.innerText = "Cartao do amor"
+          mainCard.innerText = "Clique para ver a mensagem";
+          footer.style.display = "none"
+        });
+
+        function handleMouseEnter() {
+          if (window.innerWidth === 520) {
+            // Se a largura da janela for 520, altere o evento para onclick
+            this.addEventListener('click', handleClick);
+          } else {
+            // Caso contrário, mantenha o evento como mouseenter
+            this.classList.add('hover');
+          }
+        }
+
+        function handleMouseLeave() {
+          this.classList.remove('hover');
+          if (window.innerWidth === 520) {
+            // Se a largura da janela for 520, remova o listener de onclick
+            this.removeEventListener('click', handleClick);
+          }
+        }
+
+      </script>
 </body>
 
 </html>
-
