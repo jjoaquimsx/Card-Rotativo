@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+main {
+  font-family: Futura;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.card {
+  background: linear-gradient(120deg, rgb(26, 26, 79), rgb(36, 57, 110));
+  color: #fff;
+  padding: 1rem;
+  width: 19rem;
+  height: 24rem;
+  box-shadow: rgba(65, 65, 72, 0.959) 0px 7px 29px 0px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 1s all ease;
+
+  #cardBody{
+    transition: none;
+  }
+}
+
+section {
+  font-family: Futura lT BT;
+  margin-top: 15px;
+  font-size: 1.3rem;
+  line-height: 22px;
+  transition: 2s linear;
+}
+
+
+
+footer {
+  position: relative;
+  top: 8rem;
+  font-size: 1.5rem;
+  font-family: Futura;
+  background: -webkit-linear-gradient(100deg, #ae05fd, #e65800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: Rainbow 4s linear infinite;
+}
+
+@keyframes Rainbow {
+  33% {
+    background: -webkit-linear-gradient(100deg, #ae05fd, #e65800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  66% {
+    background: -webkit-linear-gradient(200deg, #e65800, #ae05fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+}
+
+.card:hover{
+  transform: rotateY(180deg);
+  background: linear-gradient(120deg,  rgb(21, 160, 106),  rgb(36, 57, 110));
+
+  #title, #cardBody, footer{
+    transform: rotateY(180deg);
+  }
+
+  footer{
+    top: 17.7rem;
+  }
+}
