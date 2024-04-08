@@ -27,6 +27,7 @@ main {
   border-radius: 15px;
   text-align: center;
   transition: 1s all ease;
+  position: absolute;
 
   #cardBody{
     transition: none;
@@ -44,15 +45,14 @@ section {
 
 
 footer {
-  position: relative;
-  top: 8rem;
   font-size: 1.5rem;
   font-family: Futura;
   background: -webkit-linear-gradient(100deg, #ae05fd, #e65800);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  animation: Rainbow 4s linear infinite;
+  margin-top: 8rem;
+  animation: Rainbow 1s linear infinite;
 }
 
 @keyframes Rainbow {
@@ -79,7 +79,4 @@ footer {
     transform: rotateY(180deg);
   }
 
-  footer{
-    top: 8rem;
-  }
 }
